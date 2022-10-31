@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <arg name="robot_type" default="ec_scout" />
+  <arg name="map_id" default="$(optenv VITAL_RADAR_MAP_ID soloHuman)" />
+  
+  <!-- Spawn world -->
+  <node name="gazebo" pkg="gazebo_ros" type="gzserver" args="$(find vital_radar_scenarios_description)/worlds/$(arg map_id).world -u" respawn="false" output="screen"/>
+  
+  <!-- Spawn robot -->
+  <include file="$(find vital_radar_scenarios_gazebo)/launch/spawn_robot_at_location.launch">
+    <arg name="robot_type" value="$(arg robot_type)"/>
+    <arg name="map_id" value="$(arg map_id)"/>
+  </include>  
+</launch>
+

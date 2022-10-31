@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>vital_radar_scenarios_gazebo</name>
+  <version>0.0.0</version>
+  <description>The vital_radar_scenarios_gazebo package</description>
+
+  <maintainer email="jahr.philipp@stud.tu-darmstadt.de">Philipp Jahr</maintainer>
+
+  <license>BSD</license>
+  
+  <author email="jahr.philipp@stud.tu-darmstadt.de">Philipp Jahr</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>gazebo_ros</exec_depend>
+
+  <export>
+
+  </export>
+</package>
+
+

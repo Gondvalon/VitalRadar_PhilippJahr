@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gazebo_ros_vital_radar</name>
+  <version>0.0.0</version>
+  <description>The gazebo_ros_vital_radar package</description>
+
+  <maintainer email="jahr.philipp@stud.tu-darmstadt.de">Philipp Jahr</maintainer>
+
+  <license>BSD</license>
+
+  <!-- Author tags are optional, multiple are allowed, one per tag -->
+  <!-- Authors do not have to be maintainers, but could be -->
+  <!-- Example: -->
+  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
+  <author email="jahr.philipp@stud.tu-darmstadt.de">Philipp Jahr</author>
+
+  <!-- Dependencies which this package needs to build itself. -->
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!-- Dependencies needed to compile this package. -->
+  <build_depend>gazebo_dev</build_depend>
+  <build_depend>vital_sign_msgs</build_depend>
+  
+  <!-- Dependencies needed after this package is compiled. -->
+  <exec_depend>gazebo</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  
+  <!-- Dependencies needed to compile this package and afterwards. -->
+  <depend>roscpp</depend>
+</package>
