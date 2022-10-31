@@ -1,0 +1,40 @@
+<gazebo reference="vital_radar_link">
+      <sensor name='radar' type='ray'>
+        <always_on>true</always_on>
+        <update_rate>30</update_rate>
+        <topic>radar_sensor</topic>
+        <pose>0 0 0 0 0 0</pose>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>32</samples>
+              <resolution>1</resolution>
+              <min_angle>-1.05</min_angle>
+              <max_angle>1.05</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>32</samples>
+              <resolution>1</resolution>
+              <min_angle>-1.05</min_angle>
+              <max_angle>1.05</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.4</min>
+            <max>12.0</max>
+            <resolution>40</resolution>
+          </range>
+        </ray>
+        <visualize>false</visualize>
+        <plugin name='vital_radar' filename='libgazebo_ros_vital_radar.so'>
+          <penetrableObjects>1000</penetrableObjects>
+          <radarPower>10000.0</radarPower>
+          <gain>1</gain>
+          <receivableSignalArea>0.01</receivableSignalArea>
+          <defaultDamping>1.0</defaultDamping>
+          <noisePower> 0.0001</noisePower>
+          <minDetectablePower>0.0</minDetectablePower>
+          <maxQualityThreshold>10</maxQualityThreshold>
+        </plugin>
+      </sensor>
+      </gazebo>
